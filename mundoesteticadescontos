@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo da Estética — Portal de Descontos & Benefícios</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Premium Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        aesthetic: {
+                            50: '#FDF8F5',
+                            100: '#FBEFEA',
+                            200: '#F7DEC3',
+                            300: '#E9C49A',
+                            400: '#D49B6A',
+                            500: '#C17B4B',
+                            600: '#A75D35',
+                            700: '#8A4526',
+                            gold: '#C5A880',
+                            goldDark: '#A38558',
+                            dark: '#1C1917',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FDF8F5;
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #DFBA8C 0%, #C5A880 50%, #A8895F 100%);
+        }
+        .dark-gold-gradient {
+            background: linear-gradient(135deg, #1C1917 0%, #2A2521 100%);
+        }
+        /* Roda da Fortuna */
+        #wheel-container {
+            perspective: 1000px;
+        }
+        #wheel {
+            transition: transform 4s cubic-bezier(0.1, 0.8, 0.1, 1);
+            transform-origin: center center;
+        }
+    </style>
+</head>
+<body class="text-stone-800 antialiased selection:bg-aesthetic-200 selection:text-stone-950">
+
+    <!-- Nav Bar -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-stone-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full gold-gradient flex items-center justify-center text-white shadow-md">
+                        <i class="fa-solid fa-wand-magic-sparkles text-lg animate-pulse"></i>
+                    </div>
+                    <div>
+                        <span class="text-xl font-bold tracking-wider text-stone-900 block leading-none">MUNDO ESTÉTICA</span>
+                        <span class="text-xs font-semibold uppercase tracking-widest text-aesthetic-gold">Clube de Benefícios</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#roleta" class="text-stone-600 hover:text-aesthetic-700 font-medium transition-colors">Roda da Sorte</a>
+                    <a href="#calculadora" class="text-stone-600 hover:text-aesthetic-700 font-medium transition-colors">Simulador Infinity</a>
+                    <a href="#cursos" class="text-stone-600 hover:text-aesthetic-700 font-medium transition-colors">Cursos Oficiais</a>
+                    <a href="#parceiros" class="text-stone-600 hover:text-aesthetic-700 font-medium transition-colors">Cupons Parceiros</a>
+                </div>
+                <div>
+                    <a href="#roleta" class="gold-gradient text-stone-950 font-bold px-5 py-2.5 rounded-full hover:shadow-lg transition-all text-sm flex items-center gap-2 border border-amber-200/20">
+                        <i class="fa-solid fa-gift"></i> Girar Roleta
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative overflow-hidden bg-gradient-to-b from-aesthetic-100 via-aesthetic-50 to-white py-16 sm:py-24">
+        <div class="absolute inset-0 z-0 opacity-40">
+            <div class="absolute top-12 left-12 w-64 h-64 rounded-full bg-aesthetic-200 filter blur-3xl animate-bounce" style="animation-duration: 10s;"></div>
+            <div class="absolute bottom-12 right-12 w-80 h-80 rounded-full bg-aesthetic-300 filter blur-3xl animate-pulse" style="animation-duration: 8s;"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-8 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-amber-100/60 border border-amber-200 text-amber-950 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider">
+                        <i class="fa-solid fa-tags text-amber-700"></i> Descontos Exclusivos Verificados de 2026
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-stone-900 tracking-tight leading-none">
+                        Sua carreira na Estética pelo <span class="text-transparent bg-clip-text gold-gradient">menor preço.</span>
+                    </h1>
+                    <p class="text-lg text-stone-600 max-w-2xl mx-auto lg:mx-0">
+                        Inscreva-se nos melhores cursos do <strong>Mundo Estética</strong> com descontos imperdíveis ou garanta cupons especiais para comprar os melhores cosméticos profissionais.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#roleta" class="dark-gold-gradient text-white font-semibold px-8 py-4 rounded-xl hover:shadow-xl transition-all flex items-center justify-center gap-3 group text-center">
+                            <i class="fa-solid fa-circle-play text-aesthetic-gold group-hover:scale-110 transition-transform"></i>
+                            Girar Roda da Sorte
+                        </a>
+                        <a href="#cursos" class="bg-white border-2 border-stone-200 text-stone-800 font-semibold px-8 py-4 rounded-xl hover:border-aesthetic-gold transition-all text-center flex items-center justify-center gap-2">
+                            Ver Cursos Promocionais
+                        </a>
+                    </div>
+                    
+                    <!-- Stats / Mini Banner -->
+                    <div class="grid grid-cols-3 gap-4 pt-4 border-t border-stone-200 max-w-md mx-auto lg:mx-0">
+                        <div>
+                            <span class="block text-3xl font-extrabold text-stone-900">Até 60%</span>
+                            <span class="text-xs text-stone-500 font-medium">De Economia Real</span>
+                        </div>
+                        <div class="border-x border-stone-200 px-4">
+                            <span class="block text-3xl font-extrabold text-stone-900">12x R$87</span>
+                            <span class="text-xs text-stone-500 font-medium">Assinatura Infinity</span>
+                        </div>
+                        <div>
+                            <span class="block text-3xl font-extrabold text-stone-900">100%</span>
+                            <span class="text-xs text-stone-500 font-medium">Garantia 7 Dias</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Main Promo Banner Graphics -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative bg-white p-8 rounded-3xl shadow-xl border border-stone-100 max-w-sm mx-auto">
+                        <div class="absolute -top-4 -right-4 bg-red-500 text-white font-bold text-xs uppercase px-3 py-1.5 rounded-full shadow-md animate-bounce">
+                            Super Oferta!
+                        </div>
+                        <div class="flex justify-between items-start mb-6">
+                            <span class="bg-aesthetic-100 text-aesthetic-700 text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded">Mundo Estética</span>
+                            <span class="text-emerald-600 font-semibold text-xs flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-emerald-500 inline-block animate-ping"></span> Ativo</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-stone-900 mb-2">Assinatura Infinity</h3>
+                        <p class="text-sm text-stone-500 mb-6">Acesso ilimitado a mais de 30 cursos profissionais de estética, pós-graduação e mentorias com Jéssica Carbonelli.</p>
+                        
+                        <div class="bg-stone-50 p-4 rounded-xl mb-6">
+                            <div class="text-xs text-stone-400 line-through">De R$ 1.997,00/ano</div>
+                            <div class="flex items-baseline gap-2">
+                                <span class="text-sm font-bold text-stone-900">Por</span>
+                                <span class="text-4xl font-black text-aesthetic-700">12x R$ 87</span>
+                                <span class="text-xs text-stone-500">/mês</span>
+                            </div>
+                            <div class="text-xs text-emerald-600 font-medium mt-1"><i class="fa
